@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class EmpoweredJumpAct : MonoBehaviour {
 
     GameObject playerRef;
@@ -55,7 +56,8 @@ public class EmpoweredJumpAct : MonoBehaviour {
                 isDblJumping = true;
                 timer = Time.time;
                 playerLucContRef.Withdraw(1);
-
+                AudioSource audio = GameObject.FindWithTag("AudioEmpJump").GetComponent<AudioSource>();
+                audio.Play();   
                 particleRef.Play();
             }
 

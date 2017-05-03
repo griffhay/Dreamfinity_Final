@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ParticleSystem))]
+[RequireComponent(typeof(AudioSource))]
+
 
 public class WellControl : MonoBehaviour {
 
@@ -38,6 +40,9 @@ public class WellControl : MonoBehaviour {
         if( Vector3.Distance(transform.position + Vector3.up, playerRef.transform.position) < distance && Input.GetButtonDown("Drain"))
         {
             GameObject newLuc = Instantiate(m_castingObj, transform.position + Vector3.up, transform.rotation);
+            //audio manager
+            AudioSource audio = GameObject.FindWithTag("AudioWellDrain").GetComponent<AudioSource>();
+            audio.Play();
             Vector3 lucDir = playerRef.transform.position - newLuc.transform.position; 
             newLuc.GetComponent<Rigidbody>().velocity = lucDir;
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class SpendLucidityAct : MonoBehaviour
 {
 
@@ -41,6 +43,9 @@ public class SpendLucidityAct : MonoBehaviour
             _casting.GetComponent<LucidityControl>().Deposit(m_castCost);
             _casting.GetComponent<Rigidbody>().AddForce(m_cam.transform.forward * m_castForce, ForceMode.Impulse);
             m_resourceControl.Deposit(-m_castCost);
+            // audio controlers ref manager
+            AudioSource audio = GameObject.FindWithTag("AudioLucCast").GetComponent<AudioSource>();
+            audio.Play();
         }
     }
 }

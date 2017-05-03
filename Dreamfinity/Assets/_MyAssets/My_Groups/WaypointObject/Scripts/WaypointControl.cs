@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEditor;
 
-//[InitializeOnLoad]
-//[ExecuteInEditMode]
 
 public class WaypointControl : MonoBehaviour {
 
@@ -13,7 +10,6 @@ public class WaypointControl : MonoBehaviour {
 
 
     SphereCollider colTrigger;
-    LineRenderer m_lineRenderer;
     GameObject m_parentObject;
     GameObject m_nextPoint;
 
@@ -30,25 +26,13 @@ public class WaypointControl : MonoBehaviour {
     /*For initializing in the editor*/
     bool m_editorInit = true;
 
-    void EditorInit()
-    {
-        m_parentObject = transform.parent.gameObject;
-        m_lineRenderer = GetComponent<LineRenderer>();
-        colTrigger = GetComponent<SphereCollider>();
-
-        //allows this to run in the scene view instead of the game view
-       //runInEditMode = true;
-
-       // m_editorInit = true;
-    }
+    
 
     private void Start()
     {
         m_parentObject = transform.parent.gameObject;
-        m_lineRenderer = GetComponent<LineRenderer>();
 
         //allows this to run in the scene view instead of the game view
-       // runInEditMode = true;
 
         m_toggle = false;
     }
@@ -58,20 +42,9 @@ public class WaypointControl : MonoBehaviour {
 
     private void Update()
     {
-        if(!m_editorInit)
-        {
-            EditorInit();
-        }
+       
 
-    /*   if (Application.isPlaying)
-        {
-            m_toggle = false;
-        }
-        else
-        {
-            m_toggle = true;
-        }
-*/
+
         m_childCount = m_parentObject.transform.childCount;
 
         //index number this object is within the parent object
@@ -89,19 +62,17 @@ public class WaypointControl : MonoBehaviour {
         
 
         //By default there should only need to be 2 points
-        m_lineRenderer.positionCount = 2;
 
         //setting the points for the line renderer
-        m_lineRenderer.SetPosition(0, this.transform.position);
-        m_lineRenderer.SetPosition(1, m_nextPoint.transform.position);
+
 
         RenderToggle(m_toggle);
     }
 
     public void RenderToggle(bool toggle)
     {
-        GetComponent<MeshRenderer>().enabled = toggle;
-        m_lineRenderer.enabled = toggle;
+      //  GetComponent<MeshRenderer>().enabled = toggle;
+       // m_lineRenderer.enabled = toggle;
        
     }
 }

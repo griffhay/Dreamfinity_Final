@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 
 public class DoubleTap : MonoBehaviour {
 
@@ -81,6 +82,9 @@ public class DoubleTap : MonoBehaviour {
                 timer = Time.time;
                 playerLucRef.Withdraw(1);
                 particleRef.Play();
+                //playing audio manager
+                 AudioSource audio = GameObject.FindWithTag("AudioDash").GetComponent<AudioSource>();
+                 audio.Play();
             }
             else
             {

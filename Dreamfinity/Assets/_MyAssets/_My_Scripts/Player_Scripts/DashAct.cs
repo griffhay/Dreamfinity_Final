@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class DashAct : MonoBehaviour {
 
     /*Empowered Dash Variables*/
@@ -41,6 +43,10 @@ public class DashAct : MonoBehaviour {
                 timer = Time.time;
                 playerLucRef.Withdraw(1);
                 particleRef.Play();
+                //play audio
+                AudioSource audio = GameObject.FindWithTag("AudioDash").GetComponent<AudioSource>();
+                audio.Play();
+                
             }    
         }
     }

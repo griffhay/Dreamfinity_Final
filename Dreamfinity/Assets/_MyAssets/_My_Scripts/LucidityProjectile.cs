@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class LucidityProjectile : MonoBehaviour {
     public LucidityControl m_plrResCont;
     Rigidbody m_rigBodRef;
@@ -39,7 +41,11 @@ public class LucidityProjectile : MonoBehaviour {
         {
             if(m_plrResCont.balance < m_plrResCont.limit)
             {
+                //play audio
+                AudioSource audio = GameObject.FindWithTag("AudioLucPickUp").GetComponent<AudioSource>();
+                audio.Play();
                 m_plrResCont.Deposit(1);
+
                 Destroy(this.gameObject);
             }
            

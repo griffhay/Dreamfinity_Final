@@ -2,6 +2,9 @@
 
 [RequireComponent(typeof(Rigidbody))]
 
+[RequireComponent(typeof(AudioSource))]
+
+
 
 public class CharacterControler : MonoBehaviour {
 
@@ -151,6 +154,9 @@ public class CharacterControler : MonoBehaviour {
                 r_rigBodRef.velocity = new Vector3(r_rigBodRef.velocity.x, m_jumpPower, r_rigBodRef.velocity.z);
                 m_isGrounded = false;
                 m_groundCheckDistance = m_origonalGroundCheckDistance;
+                //play audio
+                AudioSource audio = GameObject.FindWithTag("AudioJump").GetComponent<AudioSource>();
+                audio.Play();
                 
             }
 

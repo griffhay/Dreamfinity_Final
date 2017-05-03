@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using C_Utilities;
 
+
+
 namespace Lucidity
 {
 
     public enum InterpolationType { cycle, alternate }
     [RequireComponent(typeof(LucableObject))]
     [RequireComponent(typeof(LucCollisionActivation))]
+    [RequireComponent(typeof(AudioSource))]
     public class LucScale : MonoBehaviour {
         public Receiver receiver;
         Trigger recieverTigger;
@@ -120,6 +123,9 @@ namespace Lucidity
 
         private void TransScale()
         {
+            //play audio for scale
+             AudioSource audio = GameObject.FindWithTag("AudioPop").GetComponent<AudioSource>();
+             audio.Play();
             transform.localScale = Vector3.Lerp(transform.lossyScale, size[i], Time.fixedTime - time);
             if(transform.lossyScale == size[i])
             {

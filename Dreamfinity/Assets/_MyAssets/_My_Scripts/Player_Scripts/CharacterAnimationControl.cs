@@ -3,6 +3,8 @@ using System.Collections.Generic;
 namespace C_Animations
 {
 
+[RequireComponent(typeof(AudioSource))]
+
     public class CharacterAnimationControl : MonoBehaviour
     {
         Animator c_animator;
@@ -58,6 +60,9 @@ namespace C_Animations
             {
                 c_animator.SetTrigger(attackHash);
                 Attack01 = true;
+                //Audio Manager
+                 AudioSource audio = GameObject.FindWithTag("AudioAttk").GetComponent<AudioSource>();
+                 audio.Play();
                // if (endAttack < 0)
                // {
 //transform.Translate(Vector3.forward * ); //this will make the character move at the local forward axis
