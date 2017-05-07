@@ -14,6 +14,7 @@ public class pauseController : MonoBehaviour {
     Button quit_txt;
     Button yes_txt;
     Button no_txt;
+    bool isPaused;
 
     void Awake()
     {
@@ -23,14 +24,45 @@ public class pauseController : MonoBehaviour {
 
     void Start()
     {
-        pauseCanvas.enabled = true;
+        //pauseCanvas.enabled = true;
         quitCanvas.enabled = false;
+        isPaused = false;
 
     }
 
     void Update()
     {
+        if (Input.GetButtonDown("Pause"))
+        {
+            if (!isPaused)
+            {
+                isPaused = true;
+            }
 
+            else
+            {
+                isPaused = false;
+            }
+        }
+
+        OnPause(isPaused);
+    }
+
+    void OnPause(bool _isPaused)
+    {
+        if (!_isPaused)
+        {
+            pauseCanvas.enabled = false;
+            //Debug.Log("Not Paused");
+            Time.timeScale = 1;
+        }
+
+        if (_isPaused)
+        {
+            pauseCanvas.enabled = true;
+            //Debug.Log("Paused");
+            Time.timeScale = 0;
+        }
     }
 
     void OnPressPauseResume()

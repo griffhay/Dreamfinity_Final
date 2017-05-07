@@ -43,6 +43,11 @@ public class PauseMenuControl : MonoBehaviour {
 
     public void Update()
     {
+        if (Input.GetButtonDown("Pause"))
+        {
+            isPaused.Flip();
+        }
+        
         OnApplicationPause(isPaused.state);
         
         

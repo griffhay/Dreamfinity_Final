@@ -24,6 +24,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private bool m_drain, m_spend; // Booleans that are true when the player is draining or spending RES.
         private bool m_attack;
         private bool m_lucJump, m_lucAttack, m_lucDash;
+        private bool pause;
 
         Trigger paused;
 
@@ -59,7 +60,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             m_lucJump = Input.GetButton("Jump");
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
-
+            //pause = Input.GetButtonDown("Pause");
             SpendLucAct.Cast(m_spend);
         }
 

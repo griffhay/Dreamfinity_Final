@@ -18,6 +18,6 @@ public class SheepCounterManager : MonoBehaviour {
     private void Update()
     {
 		outPutText = sheepCount.ToString();
-		sheepCounterText.text = outPutText;
+		sheepCounterText.text = outPutText + "/50";
     }
 }
