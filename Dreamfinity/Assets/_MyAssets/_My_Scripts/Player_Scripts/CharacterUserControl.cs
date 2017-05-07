@@ -26,6 +26,8 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private bool m_lucJump, m_lucAttack, m_lucDash;
         private bool pause;
 
+        public bool getSpendDown;
+
         Trigger paused;
 
         private void Awake()
@@ -56,12 +58,34 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
                 m_jump = Input.GetButton("Jump");
             }
 
+
+            if (Input.GetAxisRaw("Spend") != 0)
+            {
+                if(!getSpendDown)
+                {
+                    SpendLucAct.Cast(true);
+                    getSpendDown = true;
+                }
+                
+            }
+
+            else if(Input.GetAxisRaw("Spend") == 0)
+            {
+        
+                getSpendDown = false;
+            }
+  
             m_spend = Input.GetButtonDown("Spend");
             m_lucJump = Input.GetButton("Jump");
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
+<<<<<<< HEAD
             //pause = Input.GetButtonDown("Pause");
             SpendLucAct.Cast(m_spend);
+=======
+
+            
+>>>>>>> 015f430f467e58b7b725f17fee47d3a803f02484
         }
 
         private void FixedUpdate()

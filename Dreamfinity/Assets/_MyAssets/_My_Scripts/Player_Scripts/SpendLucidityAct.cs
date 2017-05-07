@@ -34,7 +34,6 @@ public class SpendLucidityAct : MonoBehaviour
     {
         GameObject _casting = m_castingObj;
 
-
         //Vector2 screenCenter = new Vector2(m_cam.pixelWidth / 2, m_cam.pixelHeight / 2);
 
         if (casting && m_resourceControl.balance > 0)
