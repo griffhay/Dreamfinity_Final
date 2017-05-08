@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class LucidityProjectile : MonoBehaviour {
     public LucidityControl m_plrResCont;
+    GameObject otherLuc;
     Rigidbody m_rigBodRef;
     float timeSinceBirth; //float value to track how long this is alive
     public float lifeSpan = 10f; //length of time this object can be alive before destroying its self
@@ -23,6 +24,11 @@ public class LucidityProjectile : MonoBehaviour {
         timeSinceBirth = Time.time;
         m_plrResCont = GameObject.FindWithTag("Player").GetComponent<LucidityControl>();
         
+        if(transform.tag == "WellLucidity")
+        {
+            lifeSpan = 3f;
+        }
+
     }
 
 
@@ -48,13 +54,31 @@ public class LucidityProjectile : MonoBehaviour {
 
                 Destroy(this.gameObject);
             }
-           
+
+          
         }
+
+        
 
         if (bounces >= threshold)
         {
             Destroy(this.gameObject);
         }
-}
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.transform.tag == "Player")
+        {
+            //play audio
+            AudioSource audio = GameObject.FindWithTag("AudioLucPickUp").GetComponent<AudioSource>();
+            audio.Play();
+            if (m_plrResCont.balance < m_plrResCont.limit)
+            {    
+                m_plrResCont.Deposit(1);
+            }
+            Destroy(this.gameObject);
+        }
+    }
 
 }

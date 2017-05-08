@@ -6,25 +6,26 @@ using UnityEngine.Video;
 
 public class loadController : MonoBehaviour {
 
-    float timer;
+    public float timer;
     VideoPlayer video;
 
 	void Start () {
-        timer = Time.fixedTime;
+        timer = Time.time;
         video = GameObject.FindWithTag("MainCamera").GetComponent<VideoPlayer>();
-
-    AudioSource audio = GameObject.FindWithTag("audio_load").GetComponent<AudioSource>();
-    audio.Play();
+        AudioSource audio = GameObject.FindWithTag("audio_load").GetComponent<AudioSource>();
+        audio.Play();
 
 	}
-    	
-	void FixedUpdate () {
-        Debug.Log(Time.fixedTime - timer);
 
-        if (Time.fixedTime - timer >= 7.11f)
+
+    	
+	void Update () {
+        Debug.Log(Time.time - timer);
+
+        if (Time.time - timer >= 7.11f)
         {
-            SceneManager.LoadScene("World_beta_Final");
-            Debug.Log("wtb shower");
+            
+            SceneManager.LoadScene(2);
         }
 
     }

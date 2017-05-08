@@ -110,7 +110,6 @@ public class pauseController : MonoBehaviour {
 
     void OnPressPauseYes()
     {
-        Debug.Log("oil & vinegar me");
         quitCanvas.enabled = false;
         SceneManager.LoadScene(0);
         AudioSource audio = GameObject.FindWithTag("audio_select").GetComponent<AudioSource>();
