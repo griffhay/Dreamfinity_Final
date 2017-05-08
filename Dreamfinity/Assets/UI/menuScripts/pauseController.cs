@@ -32,7 +32,7 @@ public class pauseController : MonoBehaviour {
     }
 
     void Update()
-    {
+    { 
         if (Input.GetButtonDown("Pause"))
         {
             if (!isPaused)
