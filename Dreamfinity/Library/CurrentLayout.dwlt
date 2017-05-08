@@ -15,6 +15,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 8
     y: 50
     width: 1584
@@ -39,6 +40,16 @@ MonoBehaviour:
   m_RootView: {fileID: 4}
   m_MinSize: {x: 950, y: 300}
 >>>>>>> feature/Asset_Addition
+=======
+    x: 9
+    y: 63
+    width: 1902
+    height: 958
+  m_ShowMode: 4
+  m_Title: 
+  m_RootView: {fileID: 8}
+  m_MinSize: {x: 950, y: 542}
+>>>>>>> feature/Aerilyn_animations
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -48,6 +59,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
 =======
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
@@ -83,6 +95,25 @@ MonoBehaviour:
 >>>>>>> feature/Asset_Addition
 =======
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 221
+    width: 319
+    height: 687
+  m_MinSize: {x: 234, y: 271}
+  m_MaxSize: {x: 10004, y: 10021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,6 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
 =======
@@ -98,11 +130,17 @@ MonoBehaviour:
 >>>>>>> feature/Asset_Addition
 =======
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> feature/Aerilyn_animations
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -133,6 +171,16 @@ MonoBehaviour:
 =======
   m_LastLoadedLayoutName: PrototypingGH
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    x: 1166
+    y: 0
+    width: 319
+    height: 908
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
+  vertical: 1
+  controlID: 440
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,6 +222,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1440
     height: 818
   m_MinSize: {x: 950, y: 300}
@@ -192,6 +241,17 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    width: 319
+    height: 221
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,16 +261,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
 =======
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> feature/Aerilyn_animations
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 0
     width: 1440
@@ -227,6 +294,15 @@ MonoBehaviour:
   vertical: 0
   controlID: 209
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    y: 0
+    width: 1485
+    height: 908
+  m_MinSize: {x: 436, y: 492}
+  m_MaxSize: {x: 14006, y: 14042}
+  vertical: 0
+  controlID: 439
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &6
 >>>>>>> feature/Asset_Addition
 MonoBehaviour:
@@ -236,6 +312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
 =======
@@ -267,6 +344,24 @@ MonoBehaviour:
   - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
+=======
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1902
+    height: 908
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 438
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &7
 >>>>>>> feature/More_level_stuff_and_puzzles
 MonoBehaviour:
@@ -282,6 +377,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 869
     y: 0
@@ -307,6 +403,19 @@ MonoBehaviour:
 --- !u!114 &7
 =======
   m_LastSelected: 1
+=======
+    x: 1485
+    y: 0
+    width: 417
+    height: 908
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &8
 >>>>>>> feature/More_level_stuff_and_puzzles
 MonoBehaviour:
@@ -316,12 +425,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> feature/Aerilyn_animations
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 6}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 1073
     y: 0
@@ -346,6 +463,15 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &8
+=======
+    x: 0
+    y: 0
+    width: 1902
+    height: 958
+  m_MinSize: {x: 950, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+--- !u!114 &9
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -353,7 +479,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> feature/Aerilyn_animations
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
@@ -362,6 +492,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1307
     y: 0
+<<<<<<< HEAD
     width: 277
     height: 752
   m_MinSize: {x: 277, y: 71}
@@ -385,6 +516,13 @@ MonoBehaviour:
   - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
+=======
+    width: 1902
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &10
 >>>>>>> feature/More_level_stuff_and_puzzles
 MonoBehaviour:
@@ -395,13 +533,18 @@ MonoBehaviour:
   m_Enabled: 1
 <<<<<<< HEAD
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> feature/Aerilyn_animations
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 0
     width: 869
     height: 752
@@ -436,6 +579,13 @@ MonoBehaviour:
   dragSelectMode: 2
   drawNormals: 0
   selection: []
+=======
+    y: 938
+    width: 1902
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -459,6 +609,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 92
     width: 759
     height: 750
@@ -510,7 +661,71 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+=======
+    y: 0
+    width: 1166
+    height: 908
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 18}
+  - {fileID: 13}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 3
+>>>>>>> feature/Aerilyn_animations
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 1
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 0
+  m_Pos:
+    serializedVersion: 2
+    x: 9
+    y: 112
+    width: 1164
+    height: 887
+  m_ViewPositions:
+    m_KeySerializationHelper:
+    - {fileID: 1107110059744184886, guid: eafc8f83182d67644a7724874c2f2bc5, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 674.4, y: 512.2}
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: eafc8f83182d67644a7724874c2f2bc5,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 1107110059744184886, guid: eafc8f83182d67644a7724874c2f2bc5,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_LiveLinkFollowTransitions: 0
+  m_MiniTool: 0
+  m_SerializedLocked: 0
+  m_CurrentEditor: 0
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -609,6 +824,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 879
     y: 99
@@ -721,6 +937,13 @@ MonoBehaviour:
 =======
 --- !u!114 &14
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    x: 468
+    y: 181
+    width: 973
+    height: 501
+--- !u!114 &14
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -744,6 +967,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1083
     y: 99
     width: 230
@@ -760,6 +984,12 @@ MonoBehaviour:
     width: 258
     height: 750
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    x: 1177
+    y: 333
+    width: 315
+    height: 666
+>>>>>>> feature/Aerilyn_animations
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -771,7 +1001,12 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Folders: []
+=======
+    m_Folders:
+    - Assets
+>>>>>>> feature/Aerilyn_animations
   m_ViewMode: 0
   m_StartGridSize: 64
 =======
@@ -783,6 +1018,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LastProjectPath: C:\Users\guy\Documents\Dreamfinity_Final\Dreamfinity
   m_IsLocked: 0
@@ -806,6 +1042,15 @@ MonoBehaviour:
     m_LastClickedID: 43626
     m_ExpandedIDs: 00000000cc4000005841000074410000f04100001aa900006ca900006aaa0000e8ab0000a4ad0000f0ad000034ae00009aae0000ccae0000acb00000b2b0000028b100006cb10000eab10000fcb1000092b200002ab400009ab60000c0b60000e2b6000076b700009eb70000d2b80000d6b80000e0bb000056bc00007cbc0000b2bc0000b8bc0000c0bc0000d4bc000042bd0000c6bd0000dabd0000d0c40000dec40000e0c4000086c50000bec50000cec5000020c6000072c60000a6c60000bec60000fac6000042c7000060c7000098c700009ec700000ac800000cc800006ec800005cc900006cc900006ec90000a0c90000a6c90000cec90000aa0d0100ac0d0100ae0d0100b00d0100b20d0100b40d0100b60d0100b80d0100ba0d0100bc0d0100be0d0100c00d0100c20d0100c40d0100c60d0100c80d0100ca0d0100cc0d0100ce0d0100d00d0100d20d010000ca9a3bffffff7f
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_LastProjectPath: C:\Users\Griffin\Documents\Dreamfinity_Final\Dreamfinity
+  m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 50930000
+    m_LastClickedID: 37712
+    m_ExpandedIDs: 00000000fe4300000e4d000012900000509100006291000090910000be910000cc910000d6910000f09100001892000050930000ba9400004695000050960000a8960000e69600007a970000569900005a990000b8990000ea9900006a9a0000809a00000e9b00008a9c0000e09e0000029f0000789f0000a09f0000b89f0000da9f000018a100001ca10000eaa3000072a400007ea40000baa40000bea40000e6a4000046a50000cca50000d2a50000e2a5000078a6000082a6000084a600001aa700004ea7000070a70000c6a70000f4a7000010a8000032a8000076a8000078a80000daa8000018a9000074a9000076a90000cca90000e2a90000a8aa0000acaa0000bcaa0000ceaa0000e8aa0000eeaa000008ab00000eab000034ab0000a8f20000aaf20000acf20000aef20000b0f20000b2f20000b4f20000b6f20000b8f20000baf20000bcf20000bef20000c0f20000c2f20000c4f20000c6f20000c8f20000caf20000ccf20000cef20000d0f2000000ca9a3bffffff7f
+>>>>>>> feature/Aerilyn_animations
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -846,8 +1091,12 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 3608}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000cc4000005841000074410000f04100001aa900006ca900006aaa0000e8ab000074ad0000a4ad0000f0ad000034ae00009aae0000ccae0000acb00000b2b0000028b100006cb10000eab10000fcb1000092b200002ab400009ab60000c0b60000e2b6000076b700009eb70000d2b80000d6b80000e0bb000056bc00007cbc0000b2bc0000b8bc0000c0bc0000d4bc000042bd0000c6bd0000ccbd0000dabd0000d0c40000dec40000e0c400007ac5000086c50000bec5000020c600005ac6000072c60000a6c60000bec60000fac6000042c7000060c7000098c700009ec700000ac800000cc800006ec800005cc900006cc900006ec90000a0c90000a6c90000cec90000aa0d0100ac0d0100ae0d0100b00d0100b20d0100b40d0100b60d0100b80d0100ba0d0100bc0d0100be0d0100c00d0100c20d0100c40d0100c60d0100c80d0100ca0d0100cc0d0100ce0d0100d00d0100d20d010000ca9a3bffffff7f
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+    m_ExpandedIDs: 00000000fe4300000e4d0000509100006291000090910000be910000cc910000d6910000f0910000189200005093000074930000ba94000050960000a8960000e6960000569900005a990000b89900006a9a00000e9b00008a9c0000e09e0000029f0000b89f0000da9f00001ca10000eaa3000072a40000baa40000bea40000e6a40000cca5000082a6000084a600001aa700004ea70000c6a7000010a8000032a8000076a80000daa8000074a9000076a90000acaa0000bcaa0000ceaa000008ab00000eab000034ab0000a8f20000aaf20000acf20000aef20000b0f20000b2f20000b4f20000b6f20000b8f20000baf20000bcf20000bef20000c0f20000c2f20000c4f20000c6f20000c8f20000caf20000ccf20000cef20000d0f2000028f300008adb020000770300
+>>>>>>> feature/Aerilyn_animations
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -863,7 +1112,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 2}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -876,12 +1125,16 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
 =======
     m_SelectedInstanceIDs: b699feff
     m_LastClickedInstanceID: -91722
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> feature/Asset_Addition
+=======
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> feature/Aerilyn_animations
     m_ExpandedInstanceIDs: 
 =======
     m_HadKeyboardFocusLastEvent: 0
@@ -914,6 +1167,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_GridSize: 64
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 110
 --- !u!114 &13
 =======
@@ -925,6 +1179,10 @@ MonoBehaviour:
   m_DirectoriesAreaWidth: 110
 --- !u!114 &15
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &15
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -952,6 +1210,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1085
     y: 131
     width: 355
@@ -963,6 +1222,13 @@ MonoBehaviour:
     height: 750
 >>>>>>> feature/More_level_stuff_and_puzzles
   m_ScrollPosition: {x: 0, y: 0}
+=======
+    x: 1496
+    y: 112
+    width: 415
+    height: 887
+  m_ScrollPosition: {x: 0, y: 323.95508}
+>>>>>>> feature/Aerilyn_animations
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -970,7 +1236,11 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &10
+=======
+--- !u!114 &16
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -992,6 +1262,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1085
     y: 131
     width: 355
@@ -1001,6 +1272,17 @@ MonoBehaviour:
     m_SelectedIDs: 2cb7feff
     m_LastClickedID: -84180
     m_ExpandedIDs: 26f5feff000000009edf00005ee8000082ee000000fb0000
+=======
+    x: 1177
+    y: 112
+    width: 315
+    height: 200
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 836}
+    m_SelectedIDs: 28f30000
+    m_LastClickedID: 0
+    m_ExpandedIDs: b667fcffba67fcffbe67fcffc667fcffca67fcffce67fcffd667fcffda67fcffde67fcffe667fcffea67fcffee67fcfff667fcfffa67fcfffe67fcff0668fcff0a68fcff0e68fcff1668fcff1a68fcff1e68fcff2268fcff2668fcff2a68fcff3268fcff3668fcff3e68fcff4268fcff4668fcff4e68fcff5268fcff5668fcff5e68fcff6268fcff6668fcff6e68fcff7268fcff7668fcff7e68fcff8268fcff8668fcff8a68fcff8e68fcff9268fcff9668fcff9a68fcff9e68fcffa268fcffa868fcffbe68fcffe668fcfff622fdfffa22fdfffe22fdff0623fdff0a23fdff0e23fdff1623fdff1a23fdff1e23fdff2623fdff2a23fdff2e23fdff3623fdff3a23fdff3e23fdff4623fdff4a23fdff4e23fdff5623fdff5a23fdff5e23fdff6223fdff6623fdff6a23fdff7223fdff7623fdff7e23fdff8223fdff8623fdff8e23fdff9223fdff9623fdff9e23fdffa223fdffa623fdffae23fdffb223fdffb623fdffbe23fdffc223fdffc623fdffca23fdffce23fdffd223fdffd623fdffda23fdffde23fdffe223fdffe823fdfffe23fdff2424fdffc699fdff469afdff4a9afdff4e9afdff569afdff5a9afdff5e9afdff669afdff6a9afdff6e9afdff769afdff7a9afdff7e9afdff869afdff8a9afdff8e9afdff969afdff9a9afdff9e9afdffa69afdffaa9afdffae9afdffb29afdffb69afdffba9afdffc29afdffc69afdffce9afdffd29afdffd69afdffde9afdffe29afdffe69afdffee9afdfff29afdfff69afdfffe9afdff029bfdff069bfdff0e9bfdff129bfdff169bfdff1a9bfdff1e9bfdff229bfdff269bfdff2a9bfdff2e9bfdff329bfdff389bfdff4e9bfdff769bfdffe647feffea47feffee47fefff647fefffa47fefffe47feff0648feff0a48feff0e48feff1648feff1a48feff1e48feff2648feff2a48feff2e48feff3648feff3a48feff3e48feff4648feff4a48feff4e48feff5248feff5648feff5a48feff6248feff6648feff6e48feff7248feff7648feff7e48feff8248feff8648feff8e48feff9248feff9648feff9e48feffa248feffa648feffae48feffb248feffb648feffba48feffbe48feffc248feffc648feffca48feffce48feffd248feffd848feffee48feff1449feff32c3feff00000000
+>>>>>>> feature/Aerilyn_animations
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1018,12 +1300,20 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
+<<<<<<< HEAD
   m_ExpandedScenes:
   - World_beta_Final
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
 --- !u!114 &11
+=======
+  m_ExpandedScenes: []
+  m_CurrenRootInstanceID: 0
+  m_Locked: 0
+  m_CurrentSortingName: TransformSorting
+--- !u!114 &17
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1045,19 +1335,34 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 131
     width: 1081
     height: 747
   m_SceneLighting: 1
   lastFramingTime: 429.9529099939905
+=======
+    x: 9
+    y: 112
+    width: 1164
+    height: 887
+  m_SceneLighting: 1
+  lastFramingTime: 134.3851265254982
+>>>>>>> feature/Aerilyn_animations
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 20.263979, y: -397.78616, z: -5.5771275}
     speed: 2
     m_Value: {x: 20.263979, y: -397.78616, z: -5.5771275}
+=======
+    m_Target: {x: -0.011291802, y: -0.7323854, z: -0.14860749}
+    speed: 2
+    m_Value: {x: -0.011291802, y: -0.70201236, z: -0.14860749}
+>>>>>>> feature/Aerilyn_animations
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -1084,9 +1389,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.21885388, y: -0.39403814, z: 0.097182035, w: -0.88735145}
   m_Size:
+<<<<<<< HEAD
     m_Target: 2.5858712
     speed: 2
     m_Value: 2.5858712
+=======
+    m_Target: 3.9937708
+    speed: 2
+    m_Value: 3.9937708
+>>>>>>> feature/Aerilyn_animations
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1097,7 +1408,11 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+<<<<<<< HEAD
 --- !u!114 &12
+=======
+--- !u!114 &18
+>>>>>>> feature/Aerilyn_animations
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -1120,10 +1435,17 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 131
     width: 1081
     height: 747
+=======
+    x: 9
+    y: 112
+    width: 1164
+    height: 887
+>>>>>>> feature/Aerilyn_animations
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -1132,10 +1454,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -540.5
     m_HBaseRangeMax: 540.5
     m_VBaseRangeMin: -365
     m_VBaseRangeMax: 365
+=======
+    m_HBaseRangeMin: -582
+    m_HBaseRangeMax: 582
+    m_VBaseRangeMin: -435
+    m_VBaseRangeMax: 435
+>>>>>>> feature/Aerilyn_animations
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1152,24 +1481,39 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 1081
       height: 730
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 540.5, y: 365}
+=======
+      width: 1164
+      height: 870
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 582, y: 435}
+>>>>>>> feature/Aerilyn_animations
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -540.5
       y: -365
       width: 1081
       height: 730
+=======
+      x: -582
+      y: -435
+      width: 1164
+      height: 870
+>>>>>>> feature/Aerilyn_animations
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1081, y: 747}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -1286,3 +1630,9 @@ MonoBehaviour:
     width: 303
     height: 750
 >>>>>>> feature/More_level_stuff_and_puzzles
+=======
+  m_LastWindowPixelSize: {x: 1164, y: 887}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000100000100
+>>>>>>> feature/Aerilyn_animations
