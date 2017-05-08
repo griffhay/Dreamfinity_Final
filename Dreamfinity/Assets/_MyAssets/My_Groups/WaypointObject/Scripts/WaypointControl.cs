@@ -21,7 +21,7 @@ public class WaypointControl : MonoBehaviour {
     public bool m_toggle = true;
     public bool m_drawPoints;
 
-
+    private LineRenderer m_lineRenderer;
 
     /*For initializing in the editor*/
     bool m_editorInit = true;
@@ -31,8 +31,8 @@ public class WaypointControl : MonoBehaviour {
     private void Start()
     {
         m_parentObject = transform.parent.gameObject;
-
-        //allows this to run in the scene view instead of the game view
+        //allows this to run in the scene view instead of the game view\
+        m_lineRenderer = GetComponent<LineRenderer>();
 
         m_toggle = false;
     }
@@ -71,8 +71,8 @@ public class WaypointControl : MonoBehaviour {
 
     public void RenderToggle(bool toggle)
     {
-      //  GetComponent<MeshRenderer>().enabled = toggle;
-       // m_lineRenderer.enabled = toggle;
+        GetComponent<MeshRenderer>().enabled = toggle;
+        m_lineRenderer.enabled = toggle;
        
     }
 }

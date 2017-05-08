@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 //using UnityStandardAssets.CrossPlatformInput;
 using Invector.CharacterController;
+using C_Utilities;
 
 namespace C_Utilities.C_Characters.C_ThirdPerson
 {
@@ -12,7 +13,6 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private CharacterControler charCont;
         private DrainLucidityAct drainLucAct; 
         private SpendLucidityAct SpendLucAct;
-        PauseMenuControl pauseMenuControl;
 
         private Transform m_Cam;
         private GameObject m_camObject;
@@ -24,6 +24,9 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private bool m_drain, m_spend; // Booleans that are true when the player is draining or spending RES.
         private bool m_attack;
         private bool m_lucJump, m_lucAttack, m_lucDash;
+        private bool pause;
+
+        public bool getSpendDown;
 
         Trigger paused;
 
@@ -34,7 +37,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             drainLucAct = GetComponent<DrainLucidityAct>();
             SpendLucAct = GetComponent<SpendLucidityAct>();
             m_Cam = GameObject.FindWithTag("MainCamera").transform;
-            pauseMenuControl = GameObject.FindWithTag("PauseMenu").GetComponent<PauseMenuControl>();
+            //pauseMenuControl = GameObject.FindWithTag("PauseMenu").GetComponent<PauseMenuControl>();
         }
 
         private void Start()
@@ -44,12 +47,10 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
 
         public void Update()
         {
-            if(Input.GetButtonDown("Pause"))
-            {
-                pauseMenuControl.isPaused.Flip();
-                Debug.Log(pauseMenuControl.isPaused.state);
-            }
+            
+           
 
+            /*
             if (!m_jump)
             {
                 m_jump = Input.GetButton("Jump");
@@ -60,24 +61,41 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
 
+            */
+            //SpendLucAct.Cast(m_spend); 
+
+            //pause = Input.GetButtonDown("Pause");
             SpendLucAct.Cast(m_spend);
+
         }
 
         private void FixedUpdate()
         {
-            /*Begining
             if (!m_jump)
             {
                 m_jump = Input.GetButton("Jump");
             }
 
-            
+            if (Input.GetAxisRaw("Spend") != 0)
+            {
+                if (!getSpendDown)
+                {
+                    SpendLucAct.Cast(true);
+                    getSpendDown = true;
+                }
+
+            }
+
+            else if (Input.GetAxisRaw("Spend") == 0)
+            {
+
+                getSpendDown = false;
+            }
+
+            m_spend = Input.GetButtonDown("Spend");
             m_lucJump = Input.GetButton("Jump");
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
-
-            SpendLucAct.Cast(m_spend);
-            end*/
 
 
             float h = Input.GetAxis("Horizontal");
