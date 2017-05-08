@@ -32,9 +32,7 @@ public class FallDamage : MonoBehaviour {
             if (air == true)
             {
                 yDistance = maxY - endY;
-                Debug.Log("Y Distance: " + yDistance);
                 TakeFallDamage(yDistance);
-                Debug.Log("Total Damage taken: " + totalDamage);
                 playerHPRef.TakeDamage(totalDamage);
                 air = false;
             }

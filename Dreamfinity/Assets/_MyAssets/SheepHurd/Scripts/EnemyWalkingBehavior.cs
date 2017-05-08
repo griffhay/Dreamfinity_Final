@@ -16,7 +16,7 @@ public class EnemyWalkingBehavior : StateMachineBehaviour {
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.speed = navMeshAgent.velocity.magnitude/2;
+        animator.speed = navMeshAgent.velocity.magnitude;
         if(animator.speed < 0.5f)
         {
             animator.speed = 0.5f;

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 
 public class DoubleTap : MonoBehaviour {
 
@@ -36,26 +35,11 @@ public class DoubleTap : MonoBehaviour {
     GameObject m_debugTextField_01;
 
 
-
-
-    private void Start()
+    void Awake()
     {
-        if(ButtonCooler == 0)
-        {
-            ButtonCooler = 0.3f;  //if this value is not initalized in the editor it is set to a default
-        }
-        
-
-        if(m_dashForce == 0)
-        {
-            m_dashForce = 1000f;
-        }
-
         m_rigBodRef = GetComponent<Rigidbody>();
         m_camObjRef = GameObject.FindWithTag("MainCamera");
-
         particleRef = GameObject.Find("Empowered_DashEffect").GetComponent<ParticleSystem>();
-
         /*Empowered Dash Variable Initialization*/
         m_charContRef = GetComponent<CharacterControler>();
 
@@ -64,14 +48,24 @@ public class DoubleTap : MonoBehaviour {
         m_debugTextField_01 = GameObject.FindWithTag("DebugUIText01");
 
         playerLucRef = GameObject.FindWithTag("Player").GetComponent<LucidityControl>();
-        
-}
+    }
+
+    private void Start()
+    {
+        if(ButtonCooler == 0)
+        {
+            ButtonCooler = 0.3f;  //if this value is not initalized in the editor it is set to a default
+        }
+
+        if(m_dashForce == 0)
+        {
+            m_dashForce = 1000f;
+        }  
+    }
 
     
     void Update()
     {
-
-
         if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical") && playerLucRef.balance > 0)
         {             
             if (ButtonCooler > 0 && ButtonCount == 1/*Number of Taps you want Minus One*/)
@@ -82,9 +76,6 @@ public class DoubleTap : MonoBehaviour {
                 timer = Time.time;
                 playerLucRef.Withdraw(1);
                 particleRef.Play();
-                //playing audio manager
-                 AudioSource audio = GameObject.FindWithTag("AudioDash").GetComponent<AudioSource>();
-                 audio.Play();
             }
             else
             {

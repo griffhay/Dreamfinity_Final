@@ -29,7 +29,6 @@ public class EmpoweredJumpAct : MonoBehaviour {
         doubleJumpFlag = false;
         isDblJumping = false;
         isJumping = false;
-
     }
 
     public void FixedUpdate()
