@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-[RequireComponent(typeof(AudioSource))]
-
 public class SpendLucidityAct : MonoBehaviour
 {
 
@@ -34,6 +32,7 @@ public class SpendLucidityAct : MonoBehaviour
     {
         GameObject _casting = m_castingObj;
 
+
         //Vector2 screenCenter = new Vector2(m_cam.pixelWidth / 2, m_cam.pixelHeight / 2);
 
         if (casting && m_resourceControl.balance > 0)
@@ -42,9 +41,6 @@ public class SpendLucidityAct : MonoBehaviour
             _casting.GetComponent<LucidityControl>().Deposit(m_castCost);
             _casting.GetComponent<Rigidbody>().AddForce(m_cam.transform.forward * m_castForce, ForceMode.Impulse);
             m_resourceControl.Deposit(-m_castCost);
-            // audio controlers ref manager
-            AudioSource audio = GameObject.FindWithTag("AudioLucCast").GetComponent<AudioSource>();
-            audio.Play();
         }
     }
 }
