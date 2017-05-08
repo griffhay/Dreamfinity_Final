@@ -21,21 +21,19 @@ public class PauseMenuControl : MonoBehaviour {
     }
 
 
-    private void OnApplicationPause(bool pause)
+    private void OnPause(bool pause)
     {
         
 
         if (!pause)
         {
             menuCanvas.enabled = false;
-            //Debug.Log("Not Paused");
             Time.timeScale = 1;
         }
         
         if(pause)
         {
             menuCanvas.enabled = true;
-            //Debug.Log("Paused");
             Time.timeScale = 0;
         }
     }
@@ -43,13 +41,6 @@ public class PauseMenuControl : MonoBehaviour {
 
     public void Update()
     {
-        if (Input.GetButtonDown("Pause"))
-        {
-            isPaused.Flip();
-        }
-        
-        OnApplicationPause(isPaused.state);
-        
-        
+        OnPause(isPaused.state);  
     }
 }

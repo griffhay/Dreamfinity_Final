@@ -30,7 +30,6 @@ public class EmpoweredJumpAct : MonoBehaviour {
         isDblJumping = false;
         isJumping = false;
 
-        Debug.Log("can any one hear me?");
     }
 
     public void FixedUpdate()
