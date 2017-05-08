@@ -79,13 +79,11 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             m_lucJump = Input.GetButton("Jump");
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
-<<<<<<< HEAD
+
             //pause = Input.GetButtonDown("Pause");
             SpendLucAct.Cast(m_spend);
-=======
 
-            
->>>>>>> 015f430f467e58b7b725f17fee47d3a803f02484
+          
         }
 
         private void FixedUpdate()
