@@ -55,6 +55,8 @@ public class pauseController : MonoBehaviour {
             pauseCanvas.enabled = false;
             //Debug.Log("Not Paused");
             Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         if (_isPaused)
@@ -62,6 +64,8 @@ public class pauseController : MonoBehaviour {
             pauseCanvas.enabled = true;
             //Debug.Log("Paused");
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
