@@ -52,18 +52,15 @@ namespace C_Animations
 
         public void C_AttackState()
         {
-  
 
-           if(Input.GetButtonDown("Attack"))
+
+            if (Input.GetButtonDown("Attack"))
             {
                 c_animator.SetTrigger(attackHash);
                 Attack01 = true;
-               // if (endAttack < 0)
-               // {
-//transform.Translate(Vector3.forward * ); //this will make the character move at the local forward axis
-                //}
-                
-            } 
+               
+            }
+
         }
 
     }

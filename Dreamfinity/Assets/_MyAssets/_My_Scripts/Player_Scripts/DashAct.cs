@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
-
 public class DashAct : MonoBehaviour {
 
     /*Empowered Dash Variables*/
@@ -36,17 +34,14 @@ public class DashAct : MonoBehaviour {
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && !m_isDashing )
         {
-
-            if (Input.GetButtonDown("Dash") && playerLucRef.balance > 0)
+           
+            if(Input.GetButtonDown("Dash") && playerLucRef.balance > 0)
             {
                 m_isDashing = true;
                 timer = Time.time;
                 playerLucRef.Withdraw(1);
                 particleRef.Play();
-                //play audio
-                AudioSource audio = GameObject.FindWithTag("AudioDash").GetComponent<AudioSource>();
-                audio.Play();
-            }
+            }    
         }
     }
 
@@ -57,14 +52,13 @@ public class DashAct : MonoBehaviour {
 
             if (Time.time - timer <= m_dashSpeed)
             {
-                //m_charContRef.m_dashing = true;
+                m_charContRef.m_dashing = true;
                 m_rigBodRef.AddForce(playerLucRef.transform.forward * m_dashForce, ForceMode.Impulse);
             }
             else
             {
-                //m_charContRef.m_dashing = false;
+                m_charContRef.m_dashing = false;
                 particleRef.Stop();
-                m_isDashing = false;
             }
         }
     }

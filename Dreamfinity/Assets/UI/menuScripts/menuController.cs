@@ -57,7 +57,7 @@ public class menuController : MonoBehaviour {
     {
         Debug.Log("kill me");
         mainMenu.enabled = false;
-        SceneManager.LoadScene("LoadScreen");
+        SceneManager.LoadScene(1);
 
         AudioSource audio = GameObject.FindWithTag("audio_select").GetComponent<AudioSource>();
         audio.Play();

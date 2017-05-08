@@ -25,8 +25,10 @@ public class WellControl : MonoBehaviour {
         m_plrResCont = GameObject.FindWithTag("Player").GetComponent<LucidityControl>();
         m_resCont = GetComponent<LucidityControl>();
         m_DrainEffect.IsAlive();
-        m_castingObj = Resources.Load("pfb_RescourseCast") as GameObject;
+        m_castingObj = Resources.Load("pfn_WellLucididty") as GameObject;
         playerRef = GameObject.FindWithTag("Player");
+
+        
 
     }
 
@@ -37,13 +39,15 @@ public class WellControl : MonoBehaviour {
             m_DrainEffect.Stop();  
         }
 
-        if( Vector3.Distance(transform.position + Vector3.up, playerRef.transform.position) < distance && Input.GetButtonDown("Drain"))
+        if( Vector3.Distance(transform.position + Vector3.up, playerRef.transform.position) < distance && Input.GetButton("Drain"))
         {
-            GameObject newLuc = Instantiate(m_castingObj, transform.position + Vector3.up, transform.rotation);
+            GameObject newLuc = Instantiate(m_castingObj, transform.position + Vector3.up , transform.rotation);
+            newLuc.GetComponent<LucidityControl>().balance = m_plrResCont.limit - m_plrResCont.balance;
+
             //audio manager
             AudioSource audio = GameObject.FindWithTag("AudioWellDrain").GetComponent<AudioSource>();
             audio.Play();
-            Vector3 lucDir = playerRef.transform.position - newLuc.transform.position; 
+            Vector3 lucDir = playerRef.transform.position  - newLuc.transform.position; 
             newLuc.GetComponent<Rigidbody>().velocity = lucDir;
         }
 

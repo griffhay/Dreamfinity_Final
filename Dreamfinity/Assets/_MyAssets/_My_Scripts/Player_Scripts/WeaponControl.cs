@@ -9,24 +9,41 @@ public class WeaponControl : MonoBehaviour {
     Animator charAnimatiorRef;
     GameObject playerRef;
     AttackAnimEvent attackAnimEventRef;
+    Collider weaponCollier;
 
     int attackHash = Animator.StringToHash("Attack");
     public bool hit;
     public bool isAttacking;
-    //public bool isAttacking;
-    
-    private void Start()
+
+    public void Awake()
     {
         playerRef = GameObject.FindWithTag("Player");
         charAnimContRef = playerRef.GetComponent<CharacterAnimationControl>();
         charAnimatiorRef = playerRef.GetComponent<Animator>();
         attackAnimEventRef = playerRef.GetComponent<AttackAnimEvent>();
+        weaponCollier = GetComponent<Collider>();
+    }
+
+    private void Start()
+    {
+        
         hit = false;  
     }
 
     private void Update()
     {
         isAttacking = attackAnimEventRef.isAttacking;
+
+        if(isAttacking)
+        {
+            weaponCollier.enabled = true;
+        }
+
+        if(!isAttacking)
+        {
+            weaponCollier.enabled = false;
+        }
+
         if(hit && !isAttacking)
         {
             hit = false;
@@ -40,6 +57,7 @@ public class WeaponControl : MonoBehaviour {
             if (isAttacking && !hit)
             {
                 other.gameObject.GetComponent<EnemyHealthManager>().heathValue -= 1;
+                other.SendMessage("TagYoureIt");
                 hit = true;
             }
            

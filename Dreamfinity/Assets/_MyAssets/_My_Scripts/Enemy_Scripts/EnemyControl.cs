@@ -10,7 +10,7 @@ public class EnemyControl : MonoBehaviour {
 
     /*Referances*/
     NavMeshAgent m_navAgent;
-    EnemyPlayerDetection m_enemyDetection;
+    EnemyDetection m_enemyDetection;
     Rigidbody m_rigBodyRef;
 
     [Header("Enemy Info")]
@@ -34,7 +34,7 @@ public class EnemyControl : MonoBehaviour {
     public void Start()
     {    
         m_navAgent = GetComponent<NavMeshAgent>();
-        m_enemyDetection = GetComponent<EnemyPlayerDetection>();
+        m_enemyDetection = GetComponent<EnemyDetection>();
         m_rigBodyRef = GetComponent<Rigidbody>();
         m_playerRef = GameObject.FindWithTag("Player");
 
