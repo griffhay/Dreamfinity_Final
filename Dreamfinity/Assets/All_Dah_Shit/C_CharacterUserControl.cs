@@ -34,7 +34,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             drainLucAct = GetComponent<DrainLucidityAct>();
             SpendLucAct = GetComponent<SpendLucidityAct>();
             m_Cam = GameObject.FindWithTag("MainCamera").transform;
-            pauseMenuControl = GameObject.FindWithTag("PauseMenu").GetComponent<PauseMenuControl>();
+          //pauseMenuControl = GameObject.FindWithTag("PauseMenu").GetComponent<PauseMenuControl>();
         }
 
         private void Start()
