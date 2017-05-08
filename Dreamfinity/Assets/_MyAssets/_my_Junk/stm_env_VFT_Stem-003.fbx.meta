@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a13648da3ef8e31429523e9131bd8c81
-timeCreated: 1493519268
+guid: 92ae271bfbdfed34fbb75e39a9cf07ae
+timeCreated: 1494197295
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: CINEMA_4D_Editor
-    100002: ns_Fence_003
-    100004: //RootNode
+    100002: //RootNode
+    100004: stm_env_VFT_Stem_003
     400000: CINEMA_4D_Editor
-    400002: ns_Fence_003
-    400004: //RootNode
-    2300000: ns_Fence_003
-    3300000: ns_Fence_003
-    4300000: ns_Fence_003
+    400002: //RootNode
+    400004: stm_env_VFT_Stem_003
+    2300000: stm_env_VFT_Stem_003
+    3300000: stm_env_VFT_Stem_003
+    4300000: stm_env_VFT_Stem_003
     9500000: //RootNode
   materials:
     importMaterials: 1
