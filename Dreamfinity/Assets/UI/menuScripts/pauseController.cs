@@ -18,14 +18,15 @@ public class pauseController : MonoBehaviour {
 
     void Awake()
     {
-        pauseCanvas = GameObject.Find("pauseCanvas").gameObject.GetComponent<Canvas>();
-        quitCanvas = GameObject.Find("quitCanvas").gameObject.GetComponent<Canvas>();
+        pauseCanvas = GameObject.FindWithTag("pauseCanvas").gameObject.GetComponent<Canvas>();
+        quitCanvas = GameObject.FindWithTag("quitCanvas").gameObject.GetComponent<Canvas>();
     }
 
     void Start()
     {
         //pauseCanvas.enabled = true;
         quitCanvas.enabled = false;
+        pauseCanvas.enabled = false;
         isPaused = false;
 
     }
@@ -37,11 +38,14 @@ public class pauseController : MonoBehaviour {
             if (!isPaused)
             {
                 isPaused = true;
+                pauseCanvas.enabled = true;
+
             }
 
             else
             {
                 isPaused = false;
+                pauseCanvas.enabled = false;
             }
         }
 
@@ -52,7 +56,7 @@ public class pauseController : MonoBehaviour {
     {
         if (!_isPaused)
         {
-            pauseCanvas.enabled = false;
+            
             //Debug.Log("Not Paused");
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
@@ -61,7 +65,6 @@ public class pauseController : MonoBehaviour {
 
         if (_isPaused)
         {
-            pauseCanvas.enabled = true;
             //Debug.Log("Paused");
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
@@ -71,8 +74,11 @@ public class pauseController : MonoBehaviour {
 
     void OnPressPauseResume()
     {
-        Debug.Log("caesar me");
+
+        isPaused = false;
         pauseCanvas.enabled = false;
+        Debug.Log("caesar me");
+        //pauseCanvas.enabled = false;
         //SceneManager.LoadScene("World_beta_Final");
 
         AudioSource audio = GameObject.FindWithTag("audio_select").GetComponent<AudioSource>();
@@ -106,8 +112,7 @@ public class pauseController : MonoBehaviour {
     {
         Debug.Log("oil & vinegar me");
         quitCanvas.enabled = false;
-        Application.Quit();
-
+        SceneManager.LoadScene(0);
         AudioSource audio = GameObject.FindWithTag("audio_select").GetComponent<AudioSource>();
         audio.Play();
 

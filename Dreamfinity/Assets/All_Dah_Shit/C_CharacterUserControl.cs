@@ -12,7 +12,6 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private CharacterControler charCont;
         private DrainLucidityAct drainLucAct; 
         private SpendLucidityAct SpendLucAct;
-        PauseMenuControl pauseMenuControl;
 
         private Transform m_Cam;
         private GameObject m_camObject;
@@ -44,16 +43,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
 
         public void Update()
         {
-            if(Input.GetButtonDown("Pause"))
-            {
-                Debug.Log("PAUSE");
-               pauseMenuControl.isPaused.Flip();
-            }
-
-            if (!m_jump)
-            {
-                m_jump = Input.GetButton("Jump");
-            }
+           
 
             m_spend = Input.GetButtonDown("Spend");
             m_lucJump = Input.GetButton("Jump");

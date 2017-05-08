@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 //using UnityStandardAssets.CrossPlatformInput;
 using Invector.CharacterController;
+using C_Utilities;
 
 namespace C_Utilities.C_Characters.C_ThirdPerson
 {
@@ -12,7 +13,6 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
         private CharacterControler charCont;
         private DrainLucidityAct drainLucAct; 
         private SpendLucidityAct SpendLucAct;
-        PauseMenuControl pauseMenuControl;
 
         private Transform m_Cam;
         private GameObject m_camObject;
@@ -47,11 +47,7 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
 
         public void Update()
         {
-            if(Input.GetButtonDown("Pause"))
-            {
-                pauseMenuControl.isPaused.Flip();
-            }
-
+            
            
 
             /*
@@ -64,16 +60,13 @@ namespace C_Utilities.C_Characters.C_ThirdPerson
             m_lucJump = Input.GetButton("Jump");
             m_drain = Input.GetButton("Drain");
             m_attack = Input.GetButton("Attack");
-<<<<<<< HEAD
+
             */
             //SpendLucAct.Cast(m_spend); 
-=======
 
             //pause = Input.GetButtonDown("Pause");
             SpendLucAct.Cast(m_spend);
 
-          
->>>>>>> d2f8869219e15eccfcdd471fdb1bdc6d2d139bf1
         }
 
         private void FixedUpdate()
