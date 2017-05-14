@@ -1,5 +1,6 @@
-Base path: C:/Program Files/Unity/Editor/Data
+Base path: D:/Unity/Editor/Data
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: preprocess
   insize=9581 outsize=1784 ok=1
 Cmd: compileSnippet
@@ -1462,3 +1463,5 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=986 outsize=3358 kw=POINT SHADOWS_CUBE _SPECULARHIGHLIGHTS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
 >>>>>>> ef7e4acb513a03758d964e9672dc8f8244738fe3
+=======
+>>>>>>> feature/particlePolishTest
