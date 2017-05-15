@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 3edc1f8c68356a0498b9a884f88053df
+timeCreated: 1493582438
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_L_Foot
+    100002: B_L_Shoulder
+    100004: B_R_Foot
+    100006: B_R_Shoulder
+    100008: Back
+    100010: Butt
+    100012: CINEMA_4D_Editor
+    100014: F_L_Foot
+    100016: F_L_Shoulder
+    100018: F_R_Foot
+    100020: F_R_Shoulder
+    100022: Face
+    100024: L_Ear
+    100026: L_Ear_Outer
+    100028: R_Ear
+    100030: R_Ear_Outer
+    100032: Root
+    100034: sheep
+    100036: //RootNode
+    100038: Tail
+    400000: B_L_Foot
+    400002: B_L_Shoulder
+    400004: B_R_Foot
+    400006: B_R_Shoulder
+    400008: Back
+    400010: Butt
+    400012: CINEMA_4D_Editor
+    400014: F_L_Foot
+    400016: F_L_Shoulder
+    400018: F_R_Foot
+    400020: F_R_Shoulder
+    400022: Face
+    400024: L_Ear
+    400026: L_Ear_Outer
+    400028: R_Ear
+    400030: R_Ear_Outer
+    400032: Root
+    400034: sheep
+    400036: //RootNode
+    400038: Tail
+    4300000: sheep
+    7400000: Sheep_Walk
+    9500000: //RootNode
+    13700000: sheep
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Sheep_Walk
+      takeName: CINEMA_4D_Main
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CINEMA_4D_Editor
+        weight: 1
+      - path: sheep
+        weight: 1
+      - path: sheep/Root
+        weight: 1
+      - path: sheep/Root/Back
+        weight: 1
+      - path: sheep/Root/Back/Butt
+        weight: 1
+      - path: sheep/Root/Back/Butt/B_L_Shoulder
+        weight: 1
+      - path: sheep/Root/Back/Butt/B_L_Shoulder/B_L_Foot
+        weight: 1
+      - path: sheep/Root/Back/Butt/B_R_Shoulder
+        weight: 1
+      - path: sheep/Root/Back/Butt/B_R_Shoulder/B_R_Foot
+        weight: 1
+      - path: sheep/Root/Back/Butt/Tail
+        weight: 1
+      - path: sheep/Root/Back/F_L_Shoulder
+        weight: 1
+      - path: sheep/Root/Back/F_L_Shoulder/F_L_Foot
+        weight: 1
+      - path: sheep/Root/Back/F_R_Shoulder
+        weight: 1
+      - path: sheep/Root/Back/F_R_Shoulder/F_R_Foot
+        weight: 1
+      - path: sheep/Root/Back/Face
+        weight: 1
+      - path: sheep/Root/Back/Face/L_Ear
+        weight: 1
+      - path: sheep/Root/Back/Face/L_Ear/L_Ear_Outer
+        weight: 1
+      - path: sheep/Root/Back/Face/R_Ear
+        weight: 1
+      - path: sheep/Root/Back/Face/R_Ear/R_Ear_Outer
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

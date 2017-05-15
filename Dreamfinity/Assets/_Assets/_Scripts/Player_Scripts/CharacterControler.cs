@@ -25,9 +25,10 @@ public class CharacterControler : MonoBehaviour {
     public float m_jumpPower;                   // How much force is used
     [Tooltip("The length of the jump while the jump button is being held")]
     public int m_jumpDeration;
-    int m_jumpCounter;                          //holds the incrementation while the jump input is held
-    bool m_canJump;                             //allows continuing jumping while true. False when the jump is let up after jumping
-    [HideInInspector]public bool m_isJumping;   //true when the player is jumping
+    public float m_jumpCounter;                          //holds the incrementation while the jump input is held
+    public bool _jump;
+    public bool m_canJump;                             //allows continuing jumping while true. False when the jump is let up after jumping
+    public bool m_isJumping;   //true when the player is jumping
     public bool m_isGrounded;  // Weather the player is on the ground or not
     public float m_groundCheckDistance;         // The distace from the center of the character downward to check for the ground. Needs to be at least half the characters height if the origin is in the center of the character;
     float m_origonalGroundCheckDistance;        // This holds the origonal check distance to so that it may be reset once changed.This is so the variable may be set from the inspecter;
@@ -47,10 +48,7 @@ public class CharacterControler : MonoBehaviour {
     AttackAnimEvent attackAnimEventRef;    
 
     void Start ()
-    {
-
-        /*Used to increment acceleration */
-         
+    {         
         if (acceleration == 0)
         {
             acceleration = 10;
@@ -60,7 +58,6 @@ public class CharacterControler : MonoBehaviour {
         {
             m_jumpPower = 10;
         }
-        
 
 		rigBodRef = GetComponent<Rigidbody>();
         r_capColider = GetComponent<CapsuleCollider>();
@@ -71,9 +68,7 @@ public class CharacterControler : MonoBehaviour {
 
     public void ToggleCharacterlook(bool toggle)
     {
-
         CombatFaceing = toggle;
-        
     }
 
     public void Move(Vector3 move, bool crouch, bool jump)
@@ -110,14 +105,11 @@ public class CharacterControler : MonoBehaviour {
         {
             rigBodRef.isKinematic = true;
             rigBodRef.velocity = Vector3.zero;
-            Debug.Log("Hope This works");
-
         }
         else
         {
             rigBodRef.isKinematic = false;
             rigBodRef.velocity = new Vector3(m_sideWayesAmount * acceleration, rigBodRef.velocity.y, m_forwardAmount * acceleration);
-
 
             //if (attackAnimEventRef.startStep)
             //{
@@ -143,39 +135,27 @@ public class CharacterControler : MonoBehaviour {
                 rigBodRef.rotation = Quaternion.LookRotation(lookCamFoward, Vector3.up);
             }
 		}
-	}
+
+        if (m_isGrounded)
+        {
+            m_jumpCounter = 0;
+        }
+    }
 
     void HandleGroundMovement(bool jump, bool crouch)
     {
         //if the player is grounded and the press the jump button, they jump and isGrounded is again false!
-            
+
         if (m_isGrounded && jump)
         {
             m_isJumping = true;
             //rigBodRef.velocity = new Vector3(rigBodRef.velocity.x, m_jumpPower , rigBodRef.velocity.z);
-            rigBodRef.AddForce(Vector3.up * m_jumpPower, ForceMode.Force);
+            rigBodRef.AddForce(Vector3.up * m_jumpPower, ForceMode.Impulse);
             m_isGrounded = false;
             m_groundCheckDistance = m_origonalGroundCheckDistance;
-            m_canJump = true;
-                
         }
 
-        if(m_isJumping && jump && m_jumpCounter < m_jumpDeration && m_canJump)
-        {
-            //rigBodRef.velocity = new Vector3(rigBodRef.velocity.x, m_jumpPower, rigBodRef.velocity.z);
-            rigBodRef.AddForce(Vector3.up * m_jumpPower, ForceMode.Force);
-            m_jumpCounter++;
-        }
-
-        if (m_isJumping && !jump)
-        {
-            m_canJump = false;
-        }
-        
-        if(m_isGrounded)
-        {
-            m_jumpCounter = 0;
-        }
+       
     }
 
 	void HandleAirbornMovement()
@@ -183,7 +163,7 @@ public class CharacterControler : MonoBehaviour {
         // if player falling, the groundcheck distance is the origonal value, else, its 0.01f
 		m_groundCheckDistance = rigBodRef.velocity.y < 0 ? m_origonalGroundCheckDistance : 0.01f;
 
-        if(rigBodRef.velocity.y > 0 && m_isJumping == false)
+        if (rigBodRef.velocity.y > 0 && m_isJumping == false)
         {
             rigBodRef.drag = 5;
         }
