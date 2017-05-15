@@ -14,6 +14,7 @@ public class LucCollisionActivation : MonoBehaviour {
         if (other.collider.gameObject.transform.tag == "Casting")
         {
             activated.state = true;
+            //GameObject.Destroy(other.collider.gameObject);
         }
     }
 

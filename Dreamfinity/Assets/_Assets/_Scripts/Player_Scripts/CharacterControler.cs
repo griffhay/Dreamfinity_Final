@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -54,11 +54,6 @@ public class CharacterControler : MonoBehaviour {
             acceleration = 10;
         }
 
-        if(m_jumpPower == 0)
-        {
-            m_jumpPower = 10;
-        }
-
 		rigBodRef = GetComponent<Rigidbody>();
         r_capColider = GetComponent<CapsuleCollider>();
 		m_origonalGroundCheckDistance = m_groundCheckDistance;
@@ -91,8 +86,7 @@ public class CharacterControler : MonoBehaviour {
         }
 
         Grounded();
-
-		move = Vector3.ProjectOnPlane(move, m_groundNormal);
+        move = Vector3.ProjectOnPlane(move, m_groundNormal);
         m_forwardAmount = move.z;
 		m_sideWayesAmount = move.x;
 		HandleGroundMovement(jump,crouch);
@@ -111,10 +105,10 @@ public class CharacterControler : MonoBehaviour {
             rigBodRef.isKinematic = false;
             rigBodRef.velocity = new Vector3(m_sideWayesAmount * acceleration, rigBodRef.velocity.y, m_forwardAmount * acceleration);
 
-            //if (attackAnimEventRef.startStep)
-            //{
+            if(attackAnimEventRef.startStep)
+            {
             //    rigBodRef.velocity = rigBodRef.transform.forward * 3.5f;
-            //}
+            }
         }
 
         // Getting the x and z velocity as a direction
@@ -135,42 +129,25 @@ public class CharacterControler : MonoBehaviour {
                 rigBodRef.rotation = Quaternion.LookRotation(lookCamFoward, Vector3.up);
             }
 		}
-
-        if (m_isGrounded)
-        {
-            m_jumpCounter = 0;
-        }
     }
 
     void HandleGroundMovement(bool jump, bool crouch)
     {
         //if the player is grounded and the press the jump button, they jump and isGrounded is again false!
-
         if (m_isGrounded && jump)
         {
             m_isJumping = true;
-            //rigBodRef.velocity = new Vector3(rigBodRef.velocity.x, m_jumpPower , rigBodRef.velocity.z);
-            rigBodRef.AddForce(Vector3.up * m_jumpPower, ForceMode.Impulse);
+            rigBodRef.velocity = new Vector3(rigBodRef.velocity.x, m_jumpPower , rigBodRef.velocity.z);
+            //rigBodRef.AddForce(Vector3.up * m_jumpPower, ForceMode.Impulse);
             m_isGrounded = false;
             m_groundCheckDistance = m_origonalGroundCheckDistance;
         }
-
-       
     }
 
 	void HandleAirbornMovement()
 	{
         // if player falling, the groundcheck distance is the origonal value, else, its 0.01f
 		m_groundCheckDistance = rigBodRef.velocity.y < 0 ? m_origonalGroundCheckDistance : 0.01f;
-
-        if (rigBodRef.velocity.y > 0 && m_isJumping == false)
-        {
-            rigBodRef.drag = 5;
-        }
-        else
-        {
-            rigBodRef.drag = 0;
-        }
 	}
 
     //This Function checks to see if the player is on the ground
@@ -181,9 +158,9 @@ public class CharacterControler : MonoBehaviour {
 
 		if (Physics.Raycast(transform.position , Vector3.down, out hitInfo, m_groundCheckDistance))
 		{
-			m_groundNormal = hitInfo.normal;
-			m_isGrounded = true;
+            m_groundNormal = hitInfo.normal;
             m_isJumping = false;
+            m_isGrounded = true;
         }
 		else
 		{
