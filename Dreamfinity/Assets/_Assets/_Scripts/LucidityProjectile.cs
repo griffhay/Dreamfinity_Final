@@ -69,6 +69,10 @@ public class LucidityProjectile : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
+        else if()
+        {
+
+        }
         else
         {
             if(bounces == 0)
