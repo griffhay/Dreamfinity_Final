@@ -61,6 +61,13 @@ public class CharacterUserControl : MonoBehaviour
             getAxisDown = false;
         }
 
+        //if (!m_jump)
+        //{
+        //    m_jump = Input.GetButton("Jump");
+        //}
+
+        m_jump = Input.GetButton("Jump");
+
         SpendLucAct.Cast(m_spend);
     }
 
@@ -73,13 +80,6 @@ public class CharacterUserControl : MonoBehaviour
         m_attack = Input.GetButton("Attack");
         m_spend = Input.GetButtonDown("Spend");
 
-        if (!m_jump)
-        {
-            m_jump = Input.GetButton("Jump");
-        }
-
-        
-
         Vector2 mouseAxis;
         mouseAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
@@ -90,6 +90,7 @@ public class CharacterUserControl : MonoBehaviour
         camController.RotateCamera(mouseAxis.x, mouseAxis.y);
 
         m_jump = false;
+
     }
 }
 
