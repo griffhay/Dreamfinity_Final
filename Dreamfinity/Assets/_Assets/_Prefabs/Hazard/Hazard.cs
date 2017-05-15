@@ -8,18 +8,18 @@ public class Hazard : MonoBehaviour {
     public float tickRate = 2;
     public int initialDamage;
     public int sustainDamage;
-    PlayerHP playerHPref;
+    LucidityControl PlayerLucidityRef;
 
     private void Start()
     {
-        playerHPref = GameObject.FindWithTag("Player").GetComponent<PlayerHP>();
+        PlayerLucidityRef = GameObject.FindWithTag("Player").GetComponent<LucidityControl>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.tag == "Player")
         {
-            playerHPref.TakeDamage(initialDamage);
+            PlayerLucidityRef.TakeLuceDamage(initialDamage);
         }
     }
 
@@ -31,7 +31,7 @@ public class Hazard : MonoBehaviour {
             {
                 timer -= tickRate;
 
-                playerHPref.TakeDamage(sustainDamage);
+                PlayerLucidityRef.TakeLuceDamage(sustainDamage);
             }
             timer += Time.deltaTime;
         }

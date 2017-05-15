@@ -19,6 +19,8 @@ public class LucidityProjectile : MonoBehaviour {
     float ignoreColliderTimer;
     float ignoreColliderTimeSpan = .5f;
 
+    public bool isCasting;
+
     private void Awake()
     {
         m_rigBodRef = GetComponent<Rigidbody>();
@@ -28,11 +30,20 @@ public class LucidityProjectile : MonoBehaviour {
     {
         m_plrResCont = m_playerRef.GetComponent<LucidityControl>();
         timeSinceBirth = Time.time;
+        if(isCasting)
+        {
+            OnCastLucidity();
+        }
 
     }
 
     public void Update()
     { 
+        if(isCasting)
+        {
+            OnCastLucidity();
+        }
+
         if(ignoringCollider)
         {
             ignoreColliderTimer += 1 * Time.deltaTime;
@@ -69,10 +80,6 @@ public class LucidityProjectile : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
-        else if()
-        {
-
-        }
         else
         {
             if(bounces == 0)
@@ -89,6 +96,13 @@ public class LucidityProjectile : MonoBehaviour {
         }
 
         
+    }
+
+    public void OnCastLucidity()
+    {
+        Physics.IgnoreCollision(m_playerRef.GetComponent<Collider>(), GetComponent<Collider>());
+        ignoringCollider = true;
+        ignoreColliderTimer = 0; 
     }
 
     public void OnTakeDamage(int amountOfD, Collider ignoredCollider)

@@ -7,12 +7,11 @@ public class RespawnManager : MonoBehaviour {
     public int spawnLocation;
     public Vector3[] SpawnPoints;
     Rigidbody rigidBodyRef;
-    PlayerHP playerHPRef;
     LucidityControl lucidityControlRef;
     SheepCounterManager sheepCountRef;
     SpawnPoint spawnPointRef;
     public int CurrentHP;
-    public int MaxHP;
+    public int MaxLuc;
     public int CurrentLucidity;
     public int MaxLucidity;
     public int SheepCount;
@@ -22,7 +21,6 @@ public class RespawnManager : MonoBehaviour {
     {
         DontDestroyOnLoad(transform.gameObject);
         rigidBodyRef = GetComponent<Rigidbody>();
-        playerHPRef = GetComponent<PlayerHP>();
         lucidityControlRef = GetComponent<LucidityControl>();
         sheepCountRef = GameObject.FindWithTag("SheepCounterText").GetComponent<SheepCounterManager>();
         spawnPointRef = GameObject.FindWithTag("SpawnPoint").GetComponent<SpawnPoint>();
@@ -40,8 +38,8 @@ public class RespawnManager : MonoBehaviour {
     {
         rigidBodyRef.position = SpawnPoints[SpawnLoc];
         Debug.Log(SpawnPoints[SpawnLoc]);
-        playerHPRef.maxHealth = MaxHP;
-        playerHPRef.currentHealth = CurrentHP;
+
+
         lucidityControlRef.limit = MaxLucidity;
         lucidityControlRef.balance = CurrentLucidity;
         sheepCountRef.sheepCount = SheepCount;
@@ -50,8 +48,8 @@ public class RespawnManager : MonoBehaviour {
 
     public void SaveSpawn()
     {
-        CurrentHP = playerHPRef.currentHealth;
-        MaxHP = playerHPRef.maxHealth;
+        CurrentHP = lucidityControlRef.balance;
+        MaxLuc = lucidityControlRef.limit;
         CurrentLucidity = lucidityControlRef.balance;
         MaxLucidity = lucidityControlRef.limit;
         SheepCount = sheepCountRef.sheepCount;

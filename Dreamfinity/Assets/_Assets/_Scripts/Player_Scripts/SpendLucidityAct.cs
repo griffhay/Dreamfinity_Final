@@ -40,6 +40,7 @@ public class SpendLucidityAct : MonoBehaviour
             _casting = Instantiate(_casting, m_castPoint, transform.rotation);
             _casting.GetComponent<LucidityControl>().Deposit(m_castCost);
             _casting.GetComponent<Rigidbody>().AddForce(m_cam.transform.forward * m_castForce, ForceMode.Impulse);
+            _casting.GetComponent<LucidityProjectile>().isCasting = true;
             m_resourceControl.Deposit(-m_castCost);
         }
     }

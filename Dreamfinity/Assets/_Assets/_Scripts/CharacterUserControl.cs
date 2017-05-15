@@ -61,12 +61,11 @@ public class CharacterUserControl : MonoBehaviour
             getAxisDown = false;
         }
 
-        //if (!m_jump)
-        //{
-        //    m_jump = Input.GetButton("Jump");
-        //}
+        if (!m_jump)
+        {
+           m_jump = Input.GetButton("Jump");
+        }
 
-        m_jump = Input.GetButton("Jump");
 
         SpendLucAct.Cast(m_spend);
     }
